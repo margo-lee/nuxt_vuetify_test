@@ -10,6 +10,10 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
+  app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/nuxt_vuetify_test/' : '/',
+    buildAssetsDir: '/static/'
+  },
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -26,8 +30,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  
   css: [
-    // '~/styles/all.scss', // 添加你的自定義 CSS 文件的路徑
+     '~/styles/main.scss', // 添加你的自定義 CSS 文件的路徑
   ],
   // css: ['~/style/style.scss']
 })

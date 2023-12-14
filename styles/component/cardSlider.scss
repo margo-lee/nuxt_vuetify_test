@@ -1,0 +1,701 @@
+.cardSlider {
+  margin: 2rem 0;
+  .cardItem {
+    box-shadow: $boxShadow !important;
+    margin-bottom: 0.25rem;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin-top: 0px;
+    top: calc(50% - 13px);
+    &:after {
+      color: $primaryDark;
+      font-size: 1.2rem !important;
+      font-weight: 700;
+    }
+  }
+}
+.cardItem {
+  padding: 1.25rem;
+  margin: 0 0.5rem;
+  .v-card__text {
+    width: auto;
+  }
+  .room {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .doctor {
+    font-size: 1.2rem;
+    font-weight: 700;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    color: $dark;
+    margin-bottom: 1rem;
+  }
+  .number {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    display: block;
+    color: $primaryDark;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  button {
+    margin-bottom: 0.5rem;
+    width: calc(100% - 36px);
+  }
+}
+.cardClinic {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    .v-chip {
+      margin-left: 0.5rem;
+    }
+  }
+  .time {
+    color: $gray3;
+    font-size: 0.85rem;
+  }
+  .v-input__slot {
+    margin-bottom: 0;
+    flex-direction: row-reverse;
+  }
+  .switch {
+    margin-top: 0rem;
+    label {
+      font-size: 0.9rem;
+      margin: 0;
+      margin-right: 1rem;
+    }
+    .v-messages {
+      min-height: 0px;
+    }
+  }
+  .v-btn {
+    margin-left: 0.5rem;
+    min-width: 36px !important;
+    padding: 0 !important;
+    background-color: unset !important;
+  }
+}
+.card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  label {
+    color: $dark;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    i {
+      font-size: 1.5rem;
+    }
+    @include screen('mobile') {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+  .infoText {
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    color: $gray3;
+    @include screen('mobile') {
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: 1.7rem;
+    }
+  }
+  .cardContent {
+    padding: 0 1.5rem;
+    margin-bottom: 0;
+    .v-textarea {
+      width: 100%;
+    }
+  }
+  .v-textarea {
+    + .switch {
+      display: flex;
+      align-items: center;
+      label {
+        font-size: 1rem;
+        margin: 0;
+        margin-right: 1rem;
+        font-weight: 400;
+      }
+      .v-input {
+        margin: 0;
+      }
+      .v-messages {
+        min-height: 0;
+      }
+    }
+  }
+  .switch {
+    display: flex;
+    align-items: center;
+    label {
+      font-size: 1rem;
+      margin: 0;
+      margin-right: 1rem;
+      font-weight: 400;
+    }
+    .v-input {
+      margin: 0;
+    }
+    .v-messages {
+      min-height: 0;
+    }
+  }
+  .radioList {
+    label {
+      font-size: 1rem;
+      margin: 0;
+      margin-right: 1rem;
+      font-weight: 400;
+      @include screen('mobile') {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .v-input__slot {
+      margin: 0;
+    }
+    .v-messages {
+      min-height: 0;
+    }
+    .v-radio {
+      @include screen('mobile') {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+.subscriptionCard {
+  h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  li {
+    font-size: 1rem;
+    color: $gray2;
+    font-weight: 500;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    .v-btn {
+      background-color: #fff;
+      color: $primaryDark;
+      font-size: 0.9rem;
+    }
+    .submitBtn {
+      color: #ffff;
+    }
+    button {
+      margin: 0 0.25rem;
+      font-weight: 700;
+    }
+  }
+}
+.settingCard {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  .item {
+    width: 85%;
+    &:first-child {
+      h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      width: 15%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+    }
+    @include screen('notebook') {
+      width: 70%;
+      &:first-child {
+        width: 30%;
+      }
+    }
+    @include screen('tablet') {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+  @include screen('tablet') {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+ul.clinicList {
+  list-style: none;
+  padding-left: 1rem;
+  margin-bottom: 0;
+  li {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    button {
+      font-weight: 700;
+    }
+  }
+  @include screen('tablet') {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+.payCardGroup {
+  @include screen('mobile') {
+    flex-wrap: wrap;
+  }
+}
+.payCard {
+  width: calc(25% - 1rem);
+  margin-right: 1rem;
+  padding: 0 0 1rem 0;
+  .title {
+    background: $secondary;
+    margin-top: 0;
+    display: block;
+    padding: 1rem;
+    h6 {
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+    p {
+      text-align: center;
+      font-size: 1rem;
+      margin: 0;
+      color: #fff;
+      font-weight: 500;
+    }
+    span {
+      font-family: Noto Sans TC;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem;
+    li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  .footer {
+    padding: 0 1rem;
+    button {
+      font-weight: 700;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0rem;
+  }
+  @media screen and (max-width: 1200px) {
+    width: calc(33.3% - 1rem);
+  }
+  @include screen('notebook') {
+    width: calc(50% - 1rem);
+  }
+  @include screen('mobile') {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.rangeSliderCard {
+  label {
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    @include screen('mobile') {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
+  .infoText {
+    @include screen('mobile') {
+      margin-bottom: 2rem;
+    }
+  }
+  .v-slider {
+    margin-top: 2.6rem;
+    .v-slider__thumb-label {
+      span {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .rangeSlider {
+    width: 100%;
+    // margin: 0 auto;
+    position: relative;
+    .sliderText {
+      position: absolute;
+      color: $gray3;
+      right: 1rem;
+    }
+    .v-messages {
+      min-height: 0;
+    }
+  }
+  .v-slider--horizontal {
+    .v-slider__track-container {
+      height: 4px !important;
+      .v-slider__track-background {
+        background-color: #ccc !important;
+      }
+    }
+  }
+}
+.accordionCard {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  .v-expansion-panel-header {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    h6 {
+      margin-bottom: 0;
+      button {
+        padding: 0 0.5rem !important;
+        min-width: 76px !important;
+        margin-left: 0.5rem;
+        height: 30px !important;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+    }
+    button {
+      padding: 0 !important;
+      background-color: #fff !important;
+      margin-right: 0.25rem;
+      height: 36px !important;
+      min-width: 36px !important;
+      max-width: 36px !important;
+    }
+    &:disabled {
+      .v-expansion-panel-header__icon {
+        display: none;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .limitContent {
+    max-height: 120px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    margin-top: 0.5rem;
+    justify-content: flex-end;
+    .linkBtn {
+      color: $primaryDark;
+      font-weight: 700;
+      &:hover {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.memberCard.v-chip {
+  margin-bottom: 0.5rem;
+  // margin-right: 1rem;
+
+  width: calc(10% - (9rem / 10));
+  margin-right: 1rem;
+  &:nth-child(10n) {
+    margin-right: 0rem;
+  }
+
+  @media screen and (max-width: 1800px) {
+    width: calc(12.5% - (7rem / 8));
+
+    &:nth-child(4n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(6n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(10n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(8n) {
+      margin-right: 0rem;
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    width: calc(16.66% - (6rem / 7));
+
+    &:nth-child(4n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(6n) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: calc(20% - (4rem / 5));
+
+    &:nth-child(4n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(5n) {
+      margin-right: 0rem;
+    }
+    &:nth-child(6n) {
+      margin-right: 1rem;
+    }
+  }
+
+  @include screen('notebook') {
+    width: calc(33.3% - (2rem / 3));
+
+    &:nth-child(4n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(5n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @include screen('mobile') {
+    width: calc(50% - 0.5rem);
+
+    &:nth-child(even) {
+      margin-right: 0em;
+    }
+    &:nth-child(odd) {
+      margin-right: 1em;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  position: relative;
+  .v-chip__content {
+    display: flex;
+    margin-right: 1.5rem;
+  }
+  button {
+    position: absolute;
+    right: 0.75rem;
+  }
+
+  &:hover {
+    background-color: lighten($primaryDark, 5) !important;
+  }
+}
+.doctorInfoCard {
+  padding: 0.5rem;
+  width: calc(25% - (3rem / 4));
+  min-height: 3.75rem;
+  border-top: 5px solid $primaryLight !important;
+  display: flex;
+  margin: 0 1rem 1rem 0;
+  align-items: flex-start;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    box-shadow: $primaryLight 0px 1px 2px, $primaryLight 0px 0px 0px 2px !important;
+  }
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .v-avatar {
+    width: 36px !important;
+    height: 36px !important;
+
+    + div {
+      margin-top: 0.25rem;
+
+      @include screen('mobile') {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  .name {
+    font-size: 1rem;
+    color: $primaryDark;
+    margin: 0 0 0 0.5rem;
+    line-height: 1rem;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .status {
+    margin-left: 0.5rem;
+    color: $error;
+    display: block;
+    font-size: 0.8rem;
+  }
+  @include screen('desktop') {
+    width: calc(16.66% - (6rem / 7));
+    &:nth-child(4n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(6n) {
+      margin-right: 0;
+    }
+  }
+  @include screen('notebook') {
+    width: calc(33.3% - (2rem / 3));
+
+    &:nth-child(4n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @include screen('mobile') {
+    width: calc(50% - 0.5rem);
+
+    &:nth-child(even) {
+      margin-right: 0em;
+    }
+    &:nth-child(odd) {
+      margin-right: 1em;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+}
+.typeInfoCard {
+  padding: 1rem;
+  width: calc(20% - (4rem / 5));
+  margin: 0 1rem 1rem 0;
+  cursor: pointer;
+  span {
+    color: $primaryDark;
+    font-weight: 700;
+  }
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+  &:hover {
+    box-shadow: $primaryLight 0px 1px 2px, $primaryLight 0px 0px 0px 2px !important;
+  }
+  @include screen('notebook') {
+    width: calc(25% - (3rem / 4));
+    &:nth-child(5n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+  @include screen('tablet') {
+    width: calc(33.3% - (2rem / 3));
+
+    &:nth-child(4n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(3n) {
+      margin-right: 0rem;
+    }
+  }
+  @include screen('mobile') {
+    width: calc(50% - (1rem / 2));
+    &:nth-child(3n) {
+      margin-right: 1rem;
+    }
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+}
+.uploadImgCard.v-card {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  box-shadow: none !important;
+  border: 1px solid $gray3;
+  img {
+    max-width: 70px;
+  }
+  .v-image {
+    border-radius: 0.25rem;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  .name,
+  .default {
+    margin-left: 1rem;
+    color: $gray3;
+  }
+  @include screen('mobile') {
+    flex-wrap: wrap;
+    .header {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      .v-image {
+        max-width: 80px;
+      }
+    }
+    .spacer {
+      + .v-btn {
+        margin-left: auto;
+      }
+    }
+  }
+}

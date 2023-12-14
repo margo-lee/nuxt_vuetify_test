@@ -1,0 +1,67 @@
+.alert.v-alert {
+  background: $error;
+  color: #fff;
+  border: 0px;
+  padding: 0.5rem 1rem;
+  .v-icon {
+    color: #fff;
+    margin: 0.25rem 0.5rem 0.25rem 0rem;
+  }
+  .text {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    margin: 0.25rem 0;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .v-alert__content {
+    > div {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  .v-btn {
+    font-weight: 700;
+    height: 2rem;
+    box-shadow: none;
+  }
+  @include screen('tablet') {
+    .v-icon {
+      margin-right: 0rem;
+    }
+    .text {
+      margin-bottom: 0.25rem;
+    }
+    p {
+      margin: 0 0.5rem;
+    }
+  }
+}
+.infoAlert.v-alert {
+  color: $error;
+  display: block;
+  background-color: rgba(255, 82, 82, 0.12);
+  .v-icon {
+    color: $error;
+  }
+}
+.errorTextAlert.v-alert {
+  background-color: unset;
+  padding: 0.5rem 0;
+  width: 100%;
+  color: $gray2;
+  .text {
+    display: flex;
+    align-items: self-start;
+  }
+  .v-icon {
+    color: $error;
+  }
+  a {
+    color: $primaryDark;
+    text-decoration: underline;
+  }
+}

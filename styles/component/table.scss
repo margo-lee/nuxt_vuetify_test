@@ -1,0 +1,375 @@
+.reserveTable {
+  margin-bottom: 1rem;
+  .theadFilter {
+    background: $primaryDark;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    .v-input {
+      max-width: 150px !important;
+      border-radius: 0.2rem;
+      .v-input__control {
+        min-height: 36px !important;
+      }
+      .v-input__slot {
+        min-height: 36px !important;
+        margin-bottom: 0;
+      }
+      .v-text-field__details {
+        margin: 0;
+      }
+    }
+    .v-btn-toggle {
+      border-radius: 0.2rem;
+    }
+    .v-item-group .v-btn {
+      height: 36px !important;
+      background-color: $primaryDark;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .v-item-group .v-btn.v-btn--is-elevated {
+      border-color: #fff !important;
+    }
+    .v-item-group .v-btn.v-btn--is-elevated.v-item--active {
+      background-color: #fff;
+      color: $primaryDark;
+      &::before {
+        opacity: 0;
+      }
+    }
+    @include screen('mobile') {
+      .v-input,
+      .v-item-group {
+        margin-bottom: 0.2rem;
+      }
+      .spacer {
+        display: none;
+      }
+    }
+  }
+  .v-data-table {
+    td {
+      height: 7.5rem !important;
+      border-right: 1px solid $gray;
+    }
+    tbody {
+      tr td {
+        word-break: break-all;
+        width: 200px;
+        &:first-child {
+          color: $primaryDark;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .v-data-table__wrapper {
+      thead th {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $primaryDark !important;
+      }
+
+      tbody {
+        tr {
+          .itemContent {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            height: 100%;
+          }
+
+          &:hover {
+            background: unset !important;
+          }
+        }
+        td {
+          cursor: pointer;
+          &:first-child {
+            width: 109px;
+
+            white-space: nowrap;
+          }
+          padding: 0.25rem 0.5rem 1rem 0.25rem;
+          .v-btn {
+            margin-left: 0.5rem;
+            height: 2rem;
+          }
+          .v-btn.hide {
+            display: none;
+          }
+        }
+        .item {
+          margin-bottom: 0.25rem;
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          white-space: nowrap;
+          width: 100%;
+          justify-content: space-between;
+          background: $grayLight;
+          border-radius: 5px;
+          padding: 0.25rem 0.5rem;
+          > div {
+            display: flex;
+            align-items: center;
+          }
+          .oddText {
+            color: rgba(76, 175, 80, 1);
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 0.25rem;
+          }
+          .evenText {
+            color: rgba(33, 150, 243, 1);
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 0.25rem;
+          }
+          &:hover {
+            background: darken($grayLight, 5);
+          }
+
+          &:nth-child(even) {
+            background: rgba(204, 204, 204, 1);
+            &:hover {
+              background: darken(rgba(204, 204, 204, 1), 5);
+            }
+          }
+          button.v-btn.functionBtn {
+            padding: 0;
+            max-width: 36px !important;
+            min-width: 36px !important;
+            background-color: unset;
+          }
+          span.name {
+            margin-left: 0.5rem;
+            display: inline-block;
+            max-width: 120px;
+          }
+        }
+      }
+      table tbody {
+        .closed {
+          color: $gray3;
+          .itemContent {
+            align-content: center;
+            min-width: 200px;
+
+            .item {
+              background: unset;
+            }
+            .empty {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              color: $gray3;
+              height: 100%;
+              align-items: center;
+              cursor: pointer;
+            }
+          }
+          background: lighten($gray, 5);
+          &:hover {
+            background: lighten($gray, 5) !important;
+          }
+        }
+      }
+    }
+  }
+}
+.reserveTypeTable {
+  thead th {
+    white-space: nowrap;
+  }
+  .switch {
+    label {
+      margin-bottom: 0;
+    }
+  }
+  .switchGroup {
+    display: flex;
+    align-items: center;
+
+    label {
+      margin-right: 1rem;
+      margin-bottom: 0;
+      min-width: 3rem;
+    }
+  }
+  .btnGroup {
+    .v-btn {
+      background: unset !important;
+      min-width: 36px !important;
+      padding: 0;
+      margin-right: 0.5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:disabled {
+        background: unset !important;
+      }
+    }
+  }
+}
+.tabList {
+  .v-window-item {
+    min-height: 50vh;
+    .selectNav {
+      margin: 1rem 0 !important;
+      background: $gray;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      h3 {
+        font-size: 1.25rem;
+        margin: 0 1rem 0 0.5rem;
+      }
+      .v-input__control {
+        height: 2.5rem;
+      }
+      .title {
+        margin-left: 2rem;
+        margin-bottom: 0;
+      }
+      .submitBtn {
+        @include screen('mobile') {
+          width: 20%;
+          min-width: unset;
+        }
+      }
+      @include screen('notebook') {
+        .selectGroup > .v-input {
+          &:nth-child(n) {
+            margin-left: 0.25rem;
+          }
+        }
+      }
+    }
+    .selectGroup {
+      display: flex;
+      margin-left: auto;
+      max-width: 100%;
+      flex-wrap: wrap;
+      .dateRangeInput.v-input {
+        min-width: 220px;
+        max-width: 100%;
+        margin-left: 0;
+        @include screen('notebook') {
+          min-width: unset;
+        }
+      }
+      .v-input {
+        width: calc(20% - 0.75rem);
+        margin-left: 0.75rem;
+        margin-bottom: 0.25rem;
+        max-width: 200px;
+
+        @include screen('notebook') {
+          width: calc(25% - 0.75rem);
+          &:nth-child(3n - 1) {
+            margin-left: 0;
+            max-width: unset;
+          }
+        }
+        @include screen('mobile') {
+          width: calc(50% - 0.75rem);
+          margin-right: 0 !important;
+        }
+        .v-select__selections {
+          flex-wrap: nowrap;
+          overflow: hidden;
+          .v-chip {
+            width: 60px;
+            min-width: 60px;
+          }
+        }
+      }
+      .v-btn {
+        font-weight: 700;
+        max-height: 38px;
+        margin-left: 0.75rem;
+        &:last-child {
+          margin-left: 0.5rem;
+          @include screen('mobile') {
+            margin-left: 0.25rem;
+          }
+        }
+      }
+
+      &:nth-last-child(1) {
+        justify-content: flex-end;
+        @include screen('notebook') {
+        }
+      }
+      @include screen('notebook') {
+      }
+      @include screen('mobile') {
+        flex-wrap: wrap;
+        margin: 0 2rem;
+      }
+    }
+  }
+  .imgItem {
+    display: flex;
+    align-items: center;
+    .v-image {
+      margin: 0.75rem 1rem 0.75rem 0;
+    }
+  }
+  .v-data-table-header {
+    i {
+      font-size: 1.25rem !important;
+    }
+  }
+}
+.infoData {
+  margin-bottom: 0.5rem;
+  .theme--light.v-data-table {
+    background-color: unset;
+  }
+  .text {
+    color: $gray3;
+    a {
+      color: $primaryDark;
+      font-weight: bold;
+    }
+  }
+  table {
+    margin-bottom: 1rem;
+  }
+  .dataTable {
+    th {
+      font-size: 1.125rem !important;
+      color: $dark !important;
+    }
+    tr {
+      th,
+      td {
+        &:first-child {
+          padding-left: 0;
+          color: $dark !important;
+          font-weight: 800;
+          width: 140px;
+        }
+      }
+    }
+    tbody {
+      &:before {
+        content: '_';
+        display: block;
+        line-height: 0.5rem;
+        color: transparent;
+      }
+      td {
+        border: 0px !important;
+        height: 38px !important;
+      }
+    }
+  }
+  .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+    background-color: transparent;
+  }
+}

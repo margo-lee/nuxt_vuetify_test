@@ -1,3 +1,15 @@
-.v-btn {
-  background-color: aqua;
-}
+// $color-pack: false;
+@import '@mdi/font/css/materialdesignicons.css';
+@import 'vuetify/styles';
+// @import '~vuetify/src/styles/main.sass';
+
+@import 'common/mixins/_mediaquery.scss';
+@import 'variables.scss';
+//material-icons-round
+@import 'vendor/material-icons-round.scss';
+// @import 'page/layout.scss';
+// @import 'page/pageDefault.scss';
+// @import 'page/login.scss';
+// @import 'page/mobile.scss';
+@import 'page/mp.scss';
+//component
