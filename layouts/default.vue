@@ -56,9 +56,54 @@
   </div>
 </template>
 
-<script setup></script>
+<script>
+//aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-<style lang="scss" scoped>
+export default {
+  data() {
+    return {
+      expand: false,
+      dialogMobile: false,
+      checkbox: null,
+      scrollPosition: false,
+    };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    },
+    getScrollPosition() {
+      window.addEventListener('scroll', (e) => {
+        let scrollTop = window.scrollY;
+        scrollTop >= 120 ? (this.scrollPosition = false) : (this.scrollPosition = true);
+      });
+    },
+    closeMobileMenu() {
+      window.addEventListener('resize', () => {
+        let viewWidth = this.$refs.scrollContent.$el.clientWidth;
+        viewWidth >= 768 ? (this.expand = false) : '';
+      });
+    },
+    // scrollToHref(refName) {
+    //   let element = this.$refs[refName];
+    //   let hrefContent = element.offsetTop;
+    //   window.scrollTo({ top: hrefContent, behavior: 'smooth' });
+    // },
+  },
+  mounted() {
+    AOS.init();
+    this.getScrollPosition();
+    this.closeMobileMenu();
+  },
+};
+</script>
+<style lang="scss">
 @import 'styles/main.scss';
 //
 </style>
